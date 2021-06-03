@@ -1,0 +1,11 @@
+First time:
+git clone https://github.com/Hadiul-Islam/reactNative-blog.git
+git checkout -b YourName
+
+Next Time : 
+
+git pull origin main
+git add .
+git commit -m "AirBook Linkon"
+git fetch && git pull origin main
+git push origin YourName

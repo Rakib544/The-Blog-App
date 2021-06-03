@@ -34,8 +34,7 @@ const MainScreen = ({navigation}) => {
 
       {/* Header End */}
 
-      
-      {/* SharedBlogs */}
+        {/* SharedBlogs */}
 
     <View>
     <FlatList 
@@ -105,6 +104,9 @@ const MainScreen = ({navigation}) => {
     </View>
 
     {/* SHARED BLOGS END */}
+
+      
+    
 
       
       </View>

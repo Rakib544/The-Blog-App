@@ -1,0 +1,1 @@
+{"ast":null,"code":"export * from \"./RNSharedElementTransition.web\";\nexport * from \"./types\";","map":{"version":3,"sources":["../../src/web/index.web.ts"],"names":[],"mappings":"AAAA;AACA","sourcesContent":["export * from \"./RNSharedElementTransition.web\";\nexport * from \"./types\";\n"],"sourceRoot":""},"metadata":{},"sourceType":"module"}

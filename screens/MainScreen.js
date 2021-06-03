@@ -3,7 +3,7 @@ import {Image, Text, View, FlatList, Dimensions, StyleSheet} from 'react-native'
 
 // Packages
 import { SharedElement } from 'react-navigation-shared-element';
-import TouchableScale from 'react-native-touchable-scale';
+// import TouchableScale from 'react-native-touchable-scale';
 
 //Sample Data
 import {data, profile, popular} from '../data' 
@@ -47,7 +47,7 @@ const MainScreen = ({navigation}) => {
         return(
           <View>
           <View>
-          <TouchableScale 
+          {/* <TouchableScale 
           activeScale={0.9}
           tension={50}
           friction={7}
@@ -94,7 +94,8 @@ const MainScreen = ({navigation}) => {
 
             </View>
 
-          </TouchableScale>
+          </TouchableScale> */}
+          <Text>Unfortunately Touchable.JS is unavialable right now</Text>
           </View>
     
           </View>

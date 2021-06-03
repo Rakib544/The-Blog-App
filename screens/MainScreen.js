@@ -149,7 +149,7 @@ const MainScreen = ({navigation}) => {
       }}
       />
 
-      {/* POPULAR   BLOG   END */}
+      {/* popular section end */}
       
 
       </View>

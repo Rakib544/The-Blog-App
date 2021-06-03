@@ -148,7 +148,10 @@ const MainScreen = ({navigation}) => {
         )
       }}
       />
+
+      {/* POPULAR   BLOG   END */}
       
+
       </View>
     );
 }

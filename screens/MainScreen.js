@@ -1,5 +1,5 @@
-import * as React from 'react' 
-import {Image, Text, View, FlatList, Dimensions, StyleSheet} from 'react-native'
+import React, { useEffect } from 'react' 
+import {Image, Text, View, FlatList, Dimensions, Button} from 'react-native'
 
 // Packages
 import { SharedElement } from 'react-navigation-shared-element';
@@ -10,9 +10,18 @@ import {data, profile, popular} from '../data'
 
 // Icons
 import {Feather} from '@expo/vector-icons'
+import { useDispatch, useSelector } from 'react-redux';
+import { loadSingleBlogData } from '../redux/Actions/Actions';
 
 
 const MainScreen = ({navigation}) => {
+
+    const dispatch = useDispatch();
+    useEffect(() => {
+      dispatch(loadSingleBlogData(2))
+    }, [])
+
+    useSelector(state => console.log(state))
 
     const {width,height} = Dimensions.get('window')
 
@@ -23,7 +32,7 @@ const MainScreen = ({navigation}) => {
 
       <View style={{marginTop: 40, marginBottom: 30,paddingHorizontal: 30, flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center'}}>
       <View>
-      <Text style={{fontSize: 14,fontWeight: '700', color: 'orange', textTransform: 'uppercase'}}>{profile.date}</Text>
+      <Text style={{fontSize: 14,fontWeight: '700', color: 'orange', textTransform: 'uppercase'}}>{new Date().toDateString()}</Text>
         <Text style={{fontSize: 36, fontWeight: 'bold'}}>Blog</Text>
       </View>
       <View>
@@ -44,6 +53,7 @@ const MainScreen = ({navigation}) => {
       keyExtractor={item => item.id}
       style={{paddingHorizontal: 30}}
       renderItem={({item}) => {
+        console.log('render vai', item)
         return(
           <View>
           <View>
@@ -117,6 +127,7 @@ const MainScreen = ({navigation}) => {
       data={popular}
       keyExtractor={item => item.id}
       renderItem={({item}) => {
+        console.log('render', item)
         return(
           <View style={{flexDirection: 'row', paddingBottom: 30,paddingLeft: 30, alignItems: 'center'}}>
 
@@ -131,7 +142,9 @@ const MainScreen = ({navigation}) => {
 
               <View style={{flexDirection: 'row', alignItems: 'center', opacity: 0.4}}>
 
-                <View style={{flexDirection: 'row', marginRight: 16, alignItems: 'center'}}>
+                <View style={{flexDirection: 'row', marginRight: 16, alignItems: 'center'}}
+                  
+                >
                   <Feather name='book-open' size={14} color='#000' />
                   <Text style={{marginHorizontal: 4, fontSize: 12}}>{item.readtime} Read</Text>
                 </View>
@@ -142,7 +155,7 @@ const MainScreen = ({navigation}) => {
                 </View>
 
               </View>
-          
+                <Button onPress={() => navigation.push('DetailScreen', {data: item})}>View Details</Button>
             </View>
 
           </View>

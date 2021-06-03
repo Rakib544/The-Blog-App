@@ -6,8 +6,8 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createSharedElementStackNavigator } from 'react-navigation-shared-element';
 
 // Screens
-import MainScreen from './screens/MainScreen'
-import DetailScreen from './screens/DetailScreen'
+import MainScreen from './pages/MainScreen'
+import DetailScreen from './pages/DetailScreen'
 
 //redux
 import { Provider } from 'react-redux';

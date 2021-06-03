@@ -22,7 +22,7 @@
     "react-native-screens": "~2.2.0",
     "react-native-shared-element": "^0.7.0",
     "react-native-tab-view": "^2.14.0",
-    "react-native-touchable-scale": "^2.1.1",
+    "react-native-touchable-scale": "^2.1.2",
     "react-native-web": "^0.16.3",
     "react-navigation-shared-element": "^5.0.0-alpha1",
     "react-redux": "^7.2.4",

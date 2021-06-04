@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { TouchableOpacity, Image, View, Text, Dimensions, ScrollView } from 'react-native';
 import { SharedElement } from 'react-navigation-shared-element';
@@ -9,11 +9,26 @@ import { addToBookMark } from '../redux/Actions/Actions';
 import { useDispatch } from 'react-redux';
 
 const DetailScreen = (props) => {
+    const [totalLikes, setTotalLikes] = useState(null)
+    const [isLike, setIsLike] = useState(false)
     const dispatch = useDispatch();
 
     const { data } = props.route.params;
+    useEffect(() => {
+        setTotalLikes(data.likes)
+    }, [])
+
     const { width, height } = Dimensions.get('window')
 
+    const handleLike = () => {
+        if (isLike) {
+            setTotalLikes(totalLikes - 1)
+        } else {
+            setTotalLikes(totalLikes + 1);
+        }
+
+        setIsLike(!isLike)
+    }
     return (
         <View style={{ flex: 1, backgroundColor: '#fff' }}>
 
@@ -66,9 +81,9 @@ const DetailScreen = (props) => {
                 <Text style={{ fontSize: 14, lineHeight: 28, textAlign: 'justify', opacity: 0.5 }}>But the idea that sunlight could counteract Covid-19, both inside and outside the body, is not all that far-fetched. Richard Weller, MD, is a dermatologist and sunlight researcher at the University of Edinburgh in the U.K. Weller says he’s looked at Covid-19 data in the United States, and that there seems to be a correlation between states that get a lot of sun and lower rates of death. “I think there are probably several pathways by which sunlight and sun exposure may exert beneficial effects he says.</Text>
 
                 <View style={{ marginVertical: 25, paddingBottom: 20, flex: 1, flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
-                    <TouchableOpacity style={{ padding: 12, flexDirection: 'row', alignItems: 'center' }}>
+                    <TouchableOpacity style={{ padding: 12, flexDirection: 'row', alignItems: 'center' }} onPress={handleLike}>
                         <Feather name='heart' size={16} color='orange' />
-                        <Text style={{ fontWeight: 'normal', textAlign: 'center', marginHorizontal: 10 }}>3.4K Likes</Text>
+                        <Text style={{ fontWeight: 'normal', textAlign: 'center', marginHorizontal: 10 }}>{totalLikes}</Text>
                     </TouchableOpacity>
                     <TouchableOpacity style={{ padding: 12, width: 100, backgroundColor: 'orange', borderRadius: 10 }}>
                         <Text style={{ color: 'white', fontWeight: 'bold', textAlign: 'center' }}>Follow</Text>

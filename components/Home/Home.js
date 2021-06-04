@@ -3,7 +3,6 @@ import React from 'react';
 import { Ionicons } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import MainScreen from '../../pages/MainScreen';
-import { SettingsScreen } from '../../App';
 import BookMark from '../../pages/BookMark/BookMark';
 
 const Tab = createBottomTabNavigator();

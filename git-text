@@ -4,8 +4,8 @@ git checkout -b YourName
 
 Next Time : 
 
-git pull origin main
+git pull origin development
 git add .
-git commit -m "AirBook Linkon"
-git fetch && git pull origin main
+git commit -m "your commit"
+git fetch && git pull origin development
 git push origin YourName

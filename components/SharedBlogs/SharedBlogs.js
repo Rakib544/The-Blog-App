@@ -1,9 +1,10 @@
 import React from 'react';
-import { View, FlatList } from 'react-native';
-import TouchableScale from 'react-native-touchable-scale';
+import { View, FlatList, TouchableScale, Dimensions } from 'react-native';
+// import TouchableScale from 'react-native-touchable-scale';
 import { SharedElement } from 'react-navigation-shared-element';
 
 const SharedBlogs = ({ data }) => {
+    const { width, height } = Dimensions.get('window')
     return (
         <View>
             <FlatList

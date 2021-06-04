@@ -1,11 +1,11 @@
 import React from 'react';
-import { Image, Text, View, FlatList, TouchableOpacity } from 'react-native'
+import { Image, Text, View, FlatList, TouchableOpacity, ScrollView } from 'react-native'
 import { Feather } from '@expo/vector-icons'
 
 const PopularBlogs = ({ popular, navigation }) => {
     return (
 
-        <View>
+        <ScrollView>
             <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', paddingHorizontal: 30, paddingVertical: 30 }}>
                 <Text style={{ fontSize: 24, fontWeight: 'bold' }}>Popular</Text>
                 <Text style={{ fontWeight: 'bold', color: 'orange' }}>Show All</Text>
@@ -51,7 +51,7 @@ const PopularBlogs = ({ popular, navigation }) => {
                     )
                 }}
             />
-        </View>
+        </ScrollView>
     );
 };
 

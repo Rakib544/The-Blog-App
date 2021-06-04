@@ -82,7 +82,7 @@ const DetailScreen = (props) => {
 
                 <View style={{ marginVertical: 25, paddingBottom: 20, flex: 1, flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
                     <TouchableOpacity style={{ padding: 12, flexDirection: 'row', alignItems: 'center' }} onPress={handleLike}>
-                        <Feather name='heart' size={16} color='orange' />
+                        <Feather name='heart' size={16} color={isLike? 'deepskyblue': 'black'}/>
                         <Text style={{ fontWeight: 'normal', textAlign: 'center', marginHorizontal: 10 }}>{totalLikes}</Text>
                     </TouchableOpacity>
                     <TouchableOpacity style={{ padding: 12, width: 100, backgroundColor: 'orange', borderRadius: 10 }}>

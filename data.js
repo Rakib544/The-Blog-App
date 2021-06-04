@@ -57,4 +57,28 @@ export const popular = [
       likes: 156,
       image: 'https://images.pexels.com/photos/326502/pexels-photo-326502.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
     },
+    {
+      id: 4,
+      topic: 'DESIGN',
+      title: 'How Visual Design Makes for Great UX',
+      readtime: '3 min',
+      likes: 156,
+      image: 'https://images.pexels.com/photos/326502/pexels-photo-326502.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
+    },
+    {
+      id: 5,
+      topic: 'DESIGN',
+      title: 'How Visual Design Makes for Great UX',
+      readtime: '3 min',
+      likes: 156,
+      image: 'https://images.pexels.com/photos/326502/pexels-photo-326502.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
+    },
+    {
+      id: 6,
+      topic: 'DESIGN',
+      title: 'How Visual Design Makes for Great UX',
+      readtime: '3 min',
+      likes: 156,
+      image: 'https://images.pexels.com/photos/326502/pexels-photo-326502.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
+    },
   ]

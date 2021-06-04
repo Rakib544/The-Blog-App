@@ -11,7 +11,6 @@ import DetailScreen from './pages/DetailScreen'
 //redux
 import { Provider } from 'react-redux';
 import { store } from './redux/store';
-import { Text, View } from 'react-native';
 import Home from './components/Home/Home';
 
 const Stack = createSharedElementStackNavigator();
@@ -34,11 +33,3 @@ const App = () => {
 };
 
 export default App;
-
-export function SettingsScreen() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Settings screen</Text>
-    </View>
-  );
-}

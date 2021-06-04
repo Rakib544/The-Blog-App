@@ -5,8 +5,11 @@ import { SharedElement } from 'react-navigation-shared-element';
 
 //icon
 import { Feather } from '@expo/vector-icons';
+import { addToBookMark } from '../redux/Actions/Actions';
+import { useDispatch } from 'react-redux';
 
 const DetailScreen = (props) => {
+    const dispatch = useDispatch();
 
     const { data } = props.route.params;
     const { width, height } = Dimensions.get('window')
@@ -41,7 +44,7 @@ const DetailScreen = (props) => {
                             </SharedElement>
                         </View>
 
-                        <TouchableOpacity>
+                        <TouchableOpacity onPress={() => dispatch(addToBookMark(data))}>
                             <Feather name='bookmark' size={24} color='white' />
                         </TouchableOpacity>
 

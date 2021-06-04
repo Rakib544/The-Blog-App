@@ -2,17 +2,17 @@ import React from 'react';
 import { Image, Text, View, FlatList, TouchableOpacity, ScrollView } from 'react-native'
 import { Feather } from '@expo/vector-icons'
 
-const PopularBlogs = ({ popular, navigation }) => {
+const PopularBlogs = ({ data, navigation }) => {
     return (
 
         <ScrollView>
             <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', paddingHorizontal: 30, paddingVertical: 30 }}>
-                <Text style={{ fontSize: 24, fontWeight: 'bold' }}>Popular</Text>
-                <Text style={{ fontWeight: 'bold', color: 'orange' }}>Show All</Text>
+                <Text style={{ fontSize: 22, fontWeight: 'bold' }}>Popular</Text>
+                <Text style={{ fontWeight: 'bold', color: 'deepskyblue' }}>Show All</Text>
             </View>
 
             <FlatList
-                data={popular}
+                data={data}
                 keyExtractor={item => item.id}
                 renderItem={({ item }) => {
 
@@ -26,8 +26,8 @@ const PopularBlogs = ({ popular, navigation }) => {
 
                                 <View style={{ width: '60%' }}>
 
-                                    <Text style={{ color: 'orange', fontWeight: 'bold', marginBottom: 4 }}>{item.topic}</Text>
-                                    <Text style={{ fontSize: 18, fontWeight: 'bold', marginBottom: 10 }}>{item.title}</Text>
+                                    <Text style={{ color: 'deepskyblue', fontWeight: 'bold', marginBottom: 4 }}>{item.topic}</Text>
+                                    <Text style={{ fontSize: 16, fontWeight: 'bold', marginBottom: 10 }}>{item.title}</Text>
 
                                     <View style={{ flexDirection: 'row', alignItems: 'center', opacity: 0.4 }}>
 

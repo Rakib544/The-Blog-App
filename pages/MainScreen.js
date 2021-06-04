@@ -2,7 +2,7 @@ import React from 'react'
 import { View } from 'react-native';
 
 //Sample Data
-import { data, profile, popular } from '../data'
+import { data, profile } from '../data'
 
 import Header from '../components/Header/Header';
 import PopularBlogs from '../components/PopularBlogs/PopularBlogs';
@@ -15,7 +15,7 @@ const MainScreen = ({ navigation }) => {
 
       <Header profile={profile} />
 
-      <PopularBlogs popular={popular} navigation={navigation} />
+      <PopularBlogs data={data} navigation={navigation} />
 
     </View>
   );

@@ -16,8 +16,8 @@ const Home = () => {
 
                     if (route.name === 'MainScreen') {
                         iconName = focused ? 'ios-information-circle' : 'ios-information-circle-outline';
-                    } else if (route.name === 'Settings') {
-                        iconName = focused ? 'ios-list-box' : 'ios-list';
+                    } else if (route.name === 'Bookmark') {
+                        iconName = focused ?'ios-bookmark-outline' : 'ios-bookmark-outline';
                     }
 
                     return <Ionicons name={iconName} size={size} color={color} />;
